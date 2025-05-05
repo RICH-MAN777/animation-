@@ -1,0 +1,90 @@
+*{
+    margin: o;
+    padding: 0; 
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+  
+  /* Orqa fonni sozlash */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Box (div) - logotip uchun konteyner */
+  .logo-container {
+    width: 400px;  /* Box kattaligi */
+    height: 400px;  /* Box kattaligi */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 15px; /* Burchaklarni yumaloq qilish */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ichidagi elementning o‘zgarishiga ruxsat beradi */
+    border: 5px solid #000; /* Boxning chetiga qora chegaralar */
+  }
+  
+  /* Kichik div (logotip) va uning animatsiyasi */
+  .animated-box {
+    width: 100px;   /* Kichik div o‘lchami */
+    height: 100px;  /* Kichik div o‘lchami */
+    background-color: #00ff00; /* Yashil rang */
+    border-radius: 15px;  /* Yumaloq burchaklar */
+    position: absolute; /* Kichik divni konteyner ichida joylashtiramiz */
+    animation: moveAroundBorder 5s infinite linear, fireEffect 2s infinite alternate;
+  }
+  
+  /* Kichik divning border bo'ylab aylanishi */
+  @keyframes moveAroundBorder {
+    0% {
+      transform: translate(150px, 0) rotate(0deg); /* Yuqori o‘ng burchakdan boshlaydi */
+    }
+    25% {
+      transform: translate(0, 150px) rotate(90deg); /* Pastga o‘ng burchakka */
+    }
+    50% {
+      transform: translate(-150px, 0) rotate(180deg); /* Pastga chap burchakka */
+    }
+    75% {
+      transform: translate(0, -150px) rotate(270deg); /* Yuqoriga chap burchakka */
+    }
+    100% {
+      transform: translate(150px, 0) rotate(360deg); /* Yuqori o‘ng burchakka qaytadi */
+    }
+  }
+  
+  /* Yonib turuvchi effekt (yashil va qizil ranglar) */
+  @keyframes fireEffect {
+    0% {
+      background-color: #00ff00; /* Yashil rang */
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Yashil yorug'lik */
+    }
+    50% {
+      background-color: #ff0000; /* Qizil rang */
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Qizil yorug'lik */
+    }
+    100% {
+      background-color: #00ff00; /* Yashil rang */
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Yashil yorug'lik */
+    }
+  }
+  
+  /* Footer */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
